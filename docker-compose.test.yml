@@ -1,0 +1,17 @@
+services:
+  db-test:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: walletapp_test
+      POSTGRES_USER: walletapp
+      POSTGRES_PASSWORD: walletapp
+    ports:
+      - "${TEST_POSTGRES_PORT:-55432}:5432"
+    tmpfs:
+      - /var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U walletapp -d walletapp_test"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+      start_period: 2s
