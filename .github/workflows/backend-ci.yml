@@ -31,7 +31,6 @@ jobs:
       TEST_DATABASE_URL: postgresql+psycopg://walletapp:walletapp@localhost:5432/walletapp_test
       DATABASE_URL: postgresql+psycopg://walletapp:walletapp@localhost:5432/walletapp_test
       JWT_SECRET: ci-test-secret-with-at-least-32-bytes
-      REFRESH_COOKIE_SECURE: "false"
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
