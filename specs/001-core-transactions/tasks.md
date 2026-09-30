@@ -147,7 +147,7 @@
   - Hecho cuando: el reuso de un refresh rotado devuelve 401 y revoca la familia.
 - [x] **T5.18** Cobertura: pytest-cov con umbral ≥ 90% en `domain/` y flujos transaccionales de `api/`. — Cubre: P4.
   - Hecho cuando: `pytest --cov --cov-fail-under=90` falla si la cobertura baja del umbral.
-- [ ] **T5.19** CI: pipeline con lint + tests + cobertura que bloquea el merge ante fallo. — Cubre: P4.
+- [x] **T5.19** CI: pipeline con lint + tests + cobertura que bloquea el merge ante fallo. — Cubre: P4.
   - Hecho cuando: verificado que un commit con un test roto produce pipeline en rojo.
 
 ---
